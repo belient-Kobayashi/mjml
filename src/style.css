@@ -1,0 +1,34 @@
+#map {
+    width: 800px;
+    height: 600px;
+    border: 1px solid #ccc;
+}
+
+/* .leaflet-popup {
+    position: fixed;
+    transform: none!important;
+    left: 400px!important;
+    bottom: auto!important;
+} */
+
+.leaflet-popup-content p {
+    word-wrap: break-word;
+}
+
+.leaflet-popup-content img {
+    width: 100%;
+    height: auto;
+}
+
+.leaflet-popup-tip-container {
+    display: none;
+}
+
+.active-marker {
+    width: 36px!important;
+    height: 48px!important;
+}
+
+#markers-list li {
+    cursor: pointer;
+}

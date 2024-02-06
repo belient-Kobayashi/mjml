@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>d3.js SVG Map with Marker and Popup</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+
+<script>
+  // SVGデータの読み込み
+  d3.xml("Map_of_tokyo_ja.svg").then(function (xml) {
+    // XMLからSVG要素を取得
+    var svgElement = xml.documentElement;
+
+    // SVGをbodyに追加
+    document.body.appendChild(svgElement);
+
+    // マーカーを追加する位置（仮の座標）
+    var markerX = 100;
+    var markerY = 100;
+
+    // マーカーを追加
+    d3.select(svgElement)
+      .append("circle")
+      .attr("cx", markerX)
+      .attr("cy", markerY)
+      .attr("r", 5)  // マーカーの半径
+      .attr("fill", "red");
+
+    // ポップアップを追加
+    var popupText = "Hello, this is a popup!";
+    d3.select(svgElement)
+      .append("text")
+      .attr("x", markerX + 10)
+      .attr("y", markerY)
+      .text(popupText);
+  });
+</script>
+
+</body>
+</html>

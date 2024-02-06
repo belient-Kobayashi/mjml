@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Simple Map</title>
+  <style>
+    /* スタイルは必要に応じて調整してください */
+  </style>
+</head>
+
+<body>
+
+<!-- map-full.svgファイルを読み込む -->
+<object id="map" type="image/svg+xml" data="map-full.svg" width="500" height="300"></object>
+
+<div class="popup" id="popup">
+  <!-- ポップアップのコンテンツを追加 -->
+  <h3 id="popupTitle"></h3>
+  <p id="popupContent"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
